@@ -3,6 +3,12 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using App1.Services;
 using App1.Views;
+using System.ComponentModel;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace App1
 {
@@ -14,7 +20,7 @@ namespace App1
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new Page1());
         }
 
         protected override void OnStart()
@@ -28,5 +34,6 @@ namespace App1
         protected override void OnResume()
         {
         }
+        
     }
 }

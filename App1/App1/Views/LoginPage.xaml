@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App1.Views.LoginPage"
+             NavigationPage.HasNavigationBar="false">
+
+    <StackLayout Spacing="0" x:Name="layout">
+        <BoxView BackgroundColor="#0033CC"/>
+        <Image Source="Resources/NTT_blue_logo_2.png" HeightRequest="80" BackgroundColor="#0033cc"/>
+        <BoxView BackgroundColor="#0033CC"/>
+        <Label Text="Username" Margin="20,0,20,0" TextColor="#455565" Font="Bold,20" Padding="0,20,0,20" />
+        <Entry x:Name="usernameEntry" Margin="20,0,20,0" Placeholder="Enter Your Username"  />
+        <Label Text="Password" Margin="20,0,20,0" TextColor="#455565" Font="Bold,20" Padding="0,20,0,20" />
+        <Entry x:Name="passwordEntry" Margin="20,0,20,0" Placeholder="Enter Your Password" IsPassword="true" />
+        <Button Text="Login" Clicked="OnButtonClicked" Font="Bold,20" Margin="20,20,20,0"  TextColor="White" BackgroundColor="#427cb2" />
+    </StackLayout>
+</ContentPage>
