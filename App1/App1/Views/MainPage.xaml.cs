@@ -18,10 +18,12 @@ namespace App1.Views
         public MainPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
+            
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.Profile, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,8 +32,8 @@ namespace App1.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
-                        MenuPages.Add(id, new NavigationPage(new ItemsPage()));
+                    case (int)MenuItemType.Profile:
+                        MenuPages.Add(id, new NavigationPage(new ProfilePage()));
                         break;
                     case (int)MenuItemType.About:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));

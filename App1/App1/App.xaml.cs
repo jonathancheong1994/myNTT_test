@@ -20,7 +20,7 @@ namespace App1
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new NavigationPage(new Page1());
+            MainPage = new NavigationPage(new LoginPage());
         }
 
         protected override void OnStart()
