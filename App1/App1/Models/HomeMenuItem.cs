@@ -6,8 +6,9 @@ namespace App1.Models
 {
     public enum MenuItemType
     {
-        Profile,
-        About
+        Browse,
+        About,
+
     }
     public class HomeMenuItem
     {

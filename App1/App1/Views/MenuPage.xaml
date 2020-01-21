@@ -3,12 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              mc:Ignorable="d"
              x:Class="App1.Views.MenuPage"
              Title="Menu">
              
     <StackLayout VerticalOptions="FillAndExpand">
-        <ListView x:Name="ListViewMenu"
+        <StackLayout BackgroundColor="#2196f3" HeightRequest="170">
+            <controls:CircleImage Source="Avatar.png" WidthRequest="100" HeightRequest="100" Margin="20,20,20,0" BorderColor="White" BorderThickness="5" VerticalOptions="Start" HorizontalOptions="CenterAndExpand">
+            </controls:CircleImage>
+            <Label Text="Jonathan Cheong"  FontSize="14"  VerticalOptions="CenterAndExpand" TextColor="White"  FontFamily="Montserrat, sans-serif" FontAttributes="Bold" HorizontalOptions="Center"/>
+        </StackLayout>
+    <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
@@ -21,7 +27,7 @@
                     <ViewCell>
                         <Grid Padding="10">
                             <Label Text="{Binding Title}" d:Text="{Binding .}" FontSize="20"/>
-                        </Grid>
+                            </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
